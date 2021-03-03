@@ -1,5 +1,9 @@
 $(document).ready(function () {
-    $("currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+    var time = moment().format("MMMM Do YYYY, h:mm:ss a")
+
+    $("#currentDay").text(time);
+    
+    
     $(".saveBtn").on("click", function () {
         console.log(this);
         var text = $(this).siblings(".description").val();
