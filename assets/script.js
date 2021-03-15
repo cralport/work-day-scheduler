@@ -1,7 +1,6 @@
 $(document).ready(function () {
-    var time = moment().format("MMMM Do YYYY, h:mm:ss a")
-
-    $("#currentDay").text(time);
+    
+    $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
     
     
     $(".saveBtn").on("click", function () {
@@ -10,7 +9,7 @@ $(document).ready(function () {
         var time = $(this).parent().attr("id");
 
         localStorage.setItem(time, text);
-    })
+    });
 
     $("#hour8.description").val(localStorage.getItem("hour8"));
     $("#hour9.description").val(localStorage.getItem("hour9"));
